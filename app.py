@@ -7,17 +7,6 @@ from datetime import datetime
 # 导入模型（后续替换为真实模型）
 from model import predict_risk
 
-# ==================== 依赖检查 ====================
-try:
-    from openpyxl import Workbook
-except ImportError:
-    st.warning("检测到缺少 openpyxl 依赖，导出 Excel 功能需要安装！")
-    if st.button("一键安装 openpyxl"):
-        import subprocess
-        import sys
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "openpyxl"])
-        st.success("安装成功！请刷新页面后重试。")
-        st.stop()
 
 st.set_page_config(page_title="风险预测系统", page_icon="⚠️", layout="wide")
 st.title("⚠️ 风险预测系统")
