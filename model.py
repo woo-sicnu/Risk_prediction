@@ -1,5 +1,5 @@
 # model.py —— 模拟的风险预测模型
- predict_risk(people_count, weather_index, safety_factor, is_holiday=False):
+def predict_risk(people_count, weather_index, safety_factor, is_holiday=False):
     """
     参数:
         people_count: int, 人数
