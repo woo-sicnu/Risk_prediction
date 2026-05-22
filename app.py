@@ -7,12 +7,11 @@ from datetime import datetime
 # 导入模型
 from model import predict_risk
 
-
 st.set_page_config(page_title="风险预测系统", page_icon="⚠️", layout="wide")
 st.title("⚠️ 风险预测系统")
 st.markdown("请输入参数，系统将自动评估当前风险值。")
 
-# ================= 侧边栏：历史记录 ====================
+# ==================== 侧边栏：历史记录 ====================
 st.sidebar.header("📋 历史预测记录")
 if 'history' not in st.session_state:
     st.session_state.history = []
@@ -62,7 +61,7 @@ with st.expander("📌 输入参数", expanded=True):
             min_value=0.0,
             max_value=1.0,
             value=0.8,
-            step=0.01，
+            step=0.01,
             format="%.2f"
         )
 
@@ -85,7 +84,7 @@ def get_risk_level(risk):
     else:
         return "高风险"
 
-# ==================== 显示预测结果 ====================in
+# ==================== 显示上次预测结果 ====================
 if 'last_result' in st.session_state:
     res = st.session_state.last_result
     st.subheader("预测结果")
