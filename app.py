@@ -61,7 +61,7 @@ with st.expander("📌 输入参数", expanded=True):
             "🛡️ 安全系数",
             min_value=0.0,
             max_value=1.0,
-            value=0.8,
+            value=0.8，
             step=0.01,
             format="%.2f", 
             help = "安全系数在 0~1 之间,越接近1越安全。"
@@ -142,7 +142,7 @@ if 'last_result' in st.session_state:
         <ul style="list-style-type: none; padding-left: 0;">
             <li><b>👥 人数 ({res['people']}人)</b> → 基础风险值 <b>{base_risk:.1f}</b></li>
             <li><b>🌧️ 天气 ({res['weather']})</b> → 影响系数 <b>{weather_factor}</b>，{weather_desc}</li>
-            <li><b>🛡️ 安全系数 ({safety_factor:.2f})</b> → 风险降低约 <b>{safety_contribution}%</b></li>
+            <li><b>🛡️ 安全系数 ({safety_factor:.2f})</b> → 风险增加约 <b>{safety_contribution}%</b></li>
         </ul>
         <p style="margin-bottom: 0; font-weight: bold; color: {card_border};">
             综合风险值 <b>{risk:.1f}</b>（{get_risk_level(risk)}）
