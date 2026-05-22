@@ -46,7 +46,8 @@ else:
 with st.expander("📌 输入参数", expanded=True):
     col1, col2 = st.columns(2)
     with col1:
-        people = st.number_input("👥 人数", min_value=0, max_value=20000, value=500, step=50)
+        people = st.number_input("👥 人数", min_value=0, max_value=20000, value=500, step=50, help = "现场实际参与活动的总人数"
+ )
         help = "现场实际参与活动的总人数"
         weather = st.selectbox(
             "🌧️ 天气",
@@ -62,10 +63,11 @@ with st.expander("📌 输入参数", expanded=True):
             min_value=0.0,
             max_value=1.0,
             value=0.8,
-            step=0.01,
+            step=0.01，
             format="%.2f"
+            help = "安全系数必须在 0~1 之间！,越接近1越安全"
         )
-        help = "安全系数必须在 0~1 之间！,越接近1越安全"
+        
 
 # ==================== 参数验证 ====================
 def validate_params(people, safety):
