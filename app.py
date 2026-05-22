@@ -61,7 +61,7 @@ with st.expander("📌 输入参数", expanded=True):
             "🛡️ 安全系数",
             min_value=0.0,
             max_value=1.0,
-            value=0.8，
+            value=0.8,
             step=0.01,
             format="%.2f", 
             help = "安全系数在 0~1 之间,越接近1越安全。"
