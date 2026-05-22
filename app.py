@@ -62,7 +62,7 @@ with st.expander("📌 输入参数", expanded=True):
             min_value=0.0,
             max_value=1.0,
             value=0.8,
-            step=0.01,
+            step=0.01，
             format="%.2f"
         )
 
@@ -85,8 +85,8 @@ def get_risk_level(risk):
     else:
         return "高风险"
 
-# ==================== 显示预测结果 ====================
-if 'last_result' 在 st.session_state:
+# ==================== 显示预测结果 ====================in
+if 'last_result' in st.session_state:
     res = st.session_state.last_result
     st.subheader("预测结果")
     st.metric("⚠️ 风险值 (0-100)", f"{res['risk']:.1f}")
